@@ -13,13 +13,15 @@ int main ()
 
       printf ("\nInsira o seu nome completo: \n");
         fflush (stdin);
-        gets (c1.nome);
-          printf ("\nInsira a sua idade:\n");
-            scanf ("%i", &c1.idade);
-              printf ("\nAgora nos informe o seu endereco:\n");
-                fflush (stdin);
-                gets(c1.endereco);
-
+          gets (c1.nome);
+    
+            printf ("\nInsira a sua idade:\n");
+              scanf ("%i", &c1.idade);
+    
+                printf ("\nAgora nos informe o seu endereco:\n");
+                 fflush (stdin);
+                  gets(c1.endereco);
+    
         printf ("\nNome: %s ",c1.nome);
           printf ("\nIdade: %i",c1.idade);
             printf ("\nEndereco: %s",c1.endereco);
