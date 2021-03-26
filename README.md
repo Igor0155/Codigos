@@ -2,7 +2,7 @@
 
 Repositorio destinado a estudos da linguagem C
 
-### Algoritmos em C
+### Algoritmos do curso de TI
   
   - [_Lista Arrey_](https://github.com/Igor0155/Codigos-C/tree/main/Curso/Arreys)
   
