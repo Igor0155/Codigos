@@ -2,7 +2,7 @@
 
 Repositorio destinado a estudos da linguagem C
 
-### Algoritmos em C
+### Algoritmos do curso de TI
   
   - [_Lista Arrey_](https://github.com/Igor0155/Codigos-C/tree/main/Curso/Arreys)
   
@@ -12,7 +12,7 @@ Repositorio destinado a estudos da linguagem C
 
   - [_Lista Atividade treino_](https://github.com/Igor0155/Codigos-C/tree/main/Curso/Lista_Atividade_Treino)
 
-  - [_Exercicios soltos_]()
+  - [_Outros Codigos_](https://github.com/Igor0155/Codigos-C/tree/main/Curso/Codigos%20soltos)
 
 
 
