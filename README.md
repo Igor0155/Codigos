@@ -1,4 +1,4 @@
-# Codigos-C
+# Codigos_C
 
 Repositorio destinado a estudos da linguagem C
 
