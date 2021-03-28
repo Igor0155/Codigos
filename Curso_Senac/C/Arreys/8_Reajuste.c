@@ -21,7 +21,7 @@ void main (){
         {   
             //colocando o reajuste no salario
             reaj[i] = reaj[i] + salario[i];
-            printf ("\nO %i salario de R$%.1f Agora ficou: R$%.2f\n",i+1,salario[i],reaj[i]);
+            printf ("\nO %i salario de R$%.2f Agora ficou: R$%.2f\n",i+1,salario[i],reaj[i]);
         }
     printf("\n\n");
 
