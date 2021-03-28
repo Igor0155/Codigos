@@ -20,7 +20,7 @@ void main (){
         for (i=0; i<10; i++)
         {   
             //colocando o reajuste no salario
-            reaj[i] = reaj[i] + salario[i];
+            reaj[i]=reaj[i] + salario[i];
             printf ("\nO %i salario de R$%.2f Agora ficou: R$%.2f\n",i+1,salario[i],reaj[i]);
         }
     printf("\n\n");
