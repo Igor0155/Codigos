@@ -16,5 +16,6 @@ Repositorio destinado a estudos da linguagem C
 
   - [_Outros Codigos_](https://github.com/Igor0155/Codigos-C/tree/main/Curso_Senac/Codigos%20soltos)
 
+## [Visualg](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/Visualg)
 
 
