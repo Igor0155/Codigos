@@ -3,6 +3,8 @@
 Repositorio destinado a estudos da linguagem C
 
 ### Algoritmos do curso de TI
+
+## C
   
   - [_Lista Arrey_](https://github.com/Igor0155/Codigos-C/tree/main/Curso_Senac/Arreys)
   
