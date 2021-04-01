@@ -1,7 +1,3 @@
-# Codigos_C
-
-Repositorio destinado a estudos da linguagem C
-
 ### Algoritmos do curso de TI
 
 ## [C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
