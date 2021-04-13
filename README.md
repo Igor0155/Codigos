@@ -1,6 +1,7 @@
 ### Repositoria destinado a estudos de linguagens de programação
 
-## [_Phyton_](https://github.com/Igor0155/Codigos_C/tree/main/Phyton)
+## [_Phyton_](https://github.com/Igor0155/Codigos/tree/main/Python)
+  - [_Cisco_]()
 
 ## [C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
