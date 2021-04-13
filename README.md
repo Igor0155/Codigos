@@ -1,4 +1,4 @@
-### Repositoria destinado a estudos de linguagens de programacao
+### Repositoria destinado a estudos de linguagens de programação
 
 ## [C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
