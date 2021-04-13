@@ -1,6 +1,7 @@
 ### Repositoria destinado a estudos de linguagens de programação
 
-## [_Phyton_](https://github.com/Igor0155/Codigos/tree/main/Python)
+## [Phyton](https://github.com/Igor0155/Codigos/tree/main/Python)
+
   - [_Cisco_](https://github.com/Igor0155/Codigos/tree/main/Python/Cisco)
 
 ## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
@@ -15,6 +16,8 @@
 
   - [_Outros Codigos_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Codigos%20soltos)
 
-## [Visualg](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/Visualg)
+## [Pseudocódigo]()
+
+  - [_Visualg_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/Visualg)
 
 
