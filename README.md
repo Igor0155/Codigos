@@ -3,7 +3,7 @@
 ## [_Phyton_](https://github.com/Igor0155/Codigos/tree/main/Python)
   - [_Cisco_](https://github.com/Igor0155/Codigos/tree/main/Python/Cisco)
 
-## [C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
+## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
   - [_Lista Arrey_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Arreys)
   
