@@ -5,7 +5,7 @@
   - [_Cisco_](https://github.com/Igor0155/Codigos/tree/main/Python/Cisco)
  
   - [_Python Para Zumbies_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies)
-    - [Lista Exercicos 1]()
+    - [Lista Exercicos 1](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_1)
 
 ## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
