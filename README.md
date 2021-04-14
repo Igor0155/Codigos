@@ -6,11 +6,11 @@
  
   - [_Python Para Zumbies_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies)
     
-    - [Lista Exercícios 1](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_1)
+    - [_Lista Exercícios 1_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_1)
     
-    - [Lista Exercícios 2](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_2)
+    - [_Lista Exercícios 2_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_2)
     
-    - [Lista Exercícios 3](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_3)
+    - [_Lista Exercícios 3_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_3)
     
 
 ## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
