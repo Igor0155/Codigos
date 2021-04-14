@@ -3,6 +3,8 @@
 ## [Phyton](https://github.com/Igor0155/Codigos/tree/main/Python)
 
   - [_Cisco_](https://github.com/Igor0155/Codigos/tree/main/Python/Cisco)
+ 
+  - [_Python Para Zumbies_]()
 
 ## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
