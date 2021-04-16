@@ -1,22 +1,25 @@
 num1 = float(input('\nNumero 1: '))
 num2 = float(input('\nNumero 2: '))
 num3 = float(input('\nNumero 3: '))
+
 aux2 = 0
 aux = 0
 
-if num1 > aux:
+if num1 >= num2 and num1 >= num3:
     aux = num1
 
-if num2 > aux:
+elif num2 >= num3:
     aux = num2
 
-if num3 > aux:
+else:
     aux = num3
 
 if num1 <= num2 and num1 <= num3:
     aux2 = num1
+
 elif num2 <= num3:
     aux2 = num2
+
 else:
     aux2 = num3
 
