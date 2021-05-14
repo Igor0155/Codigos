@@ -1,10 +1,10 @@
-### Repositoria destinado a estudos de linguagens de programação
+### Repositório destinado a estudos de linguagens de programação
 
 ## [Phyton](https://github.com/Igor0155/Codigos/tree/main/Python)
 
   - [_Cisco_](https://github.com/Igor0155/Codigos/tree/main/Python/Cisco)
  
-  - [_Python Para Zumbies_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies)
+  - [_Python_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies)
     
     - [_Lista Exercícios 1_](https://github.com/Igor0155/Codigos/tree/main/Python/Python_para_Zumbies/Lista_Exercicio_1)
     
@@ -15,7 +15,7 @@
 
 ## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
-  - [_Lista Arrey_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Arreys)
+  - [_Lista Array_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Arreys)
   
   - [_Lista I love You_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Lista_I_love_You)
   
@@ -23,10 +23,10 @@
 
   - [_Lista Atividade treino_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Lista_Atividade_Treino)
 
-  - [_Outros Codigos_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Codigos%20soltos)
+  - [_Outros Códigos_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Codigos%20soltos)
 
 ## [Pseudocódigo]()
 
-  - [_Visualg_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/Visualg)
+  - [_VisuAlg_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/Visualg)
 
 
