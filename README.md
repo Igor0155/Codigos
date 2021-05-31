@@ -15,7 +15,7 @@
 
 ## [Linguagem C](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C)
   
-  - [_Lista Array_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Arreys)
+  - [_Lista Array_](https://github.com/Igor0155/Codigos/tree/main/Curso_Senac/C/Arrays)
   
   - [_Lista I love You_](https://github.com/Igor0155/Codigos_C/tree/main/Curso_Senac/C/Lista_I_love_You)
   
