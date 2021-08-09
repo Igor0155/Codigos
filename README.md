@@ -1,4 +1,4 @@
-### Repositório destinado a estudos de linguagens de programação testeeeee
+### Repositório destinado a estudos de linguagens de programação 
 
 ## [Phyton](https://github.com/Igor0155/Codigos/tree/main/Python)
 
