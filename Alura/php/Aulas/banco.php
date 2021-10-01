@@ -92,16 +92,16 @@ unset($contasCorrentes['123.256.789-10']);
 
     <dl>
 
-    <!- <\?= // significa  ->
-        <?php
-        foreach ($contasCorrentes as $cpf => $conta) { ?>
-            <dt>
-                <h3><?= $conta['titular']; ?> - <?= $cpf; ?></h3>
-            </dt>
-            <dd>    
-                Saldo: <?= $conta['saldo']; ?>
-            </dd>
-        <?php } ?>
+        <!- <\?=// significa ->
+            <?php
+            foreach ($contasCorrentes as $cpf => $conta) { ?>
+                <dt>
+                    <h3><?= $conta['titular']; ?> - <?= $cpf; ?></h3>
+                </dt>
+                <dd>
+                    Saldo: <?= $conta['saldo']; ?>
+                </dd>
+            <?php } ?>
     </dl>
 </body>
 
