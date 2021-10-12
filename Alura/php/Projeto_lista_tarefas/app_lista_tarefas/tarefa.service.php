@@ -1,4 +1,7 @@
 <?php
+
+// functions para comunicação com o bd 
+
 class TarefaService
 {
 
