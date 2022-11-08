@@ -122,32 +122,41 @@ class Disciplina:
 # Definindo cursos
 curso1 = Curso("Computacao")
 curso2 = Curso("Arquitetura")
+
 # Definindo alunos 
 aluno1 = Aluno(0, "Ana")
 aluno2 = Aluno(1, "Jose")
 aluno3 = Aluno(2, "Maria")
+
 # Definindo professores 
 professor1 = Professor(0, "Marcus")
 professor2 = Professor(0, "Lovisk")
+
 # Definindo turmas 
 turma1 = Turma("Turma A")
 turma2 = Turma("Turma B")
+
 # Definindo disciplinas 
 disciplina1 = Disciplina(0, "Orientação a objetos")
 disciplina2 = Disciplina(1, "Analise de sistemas")
-# Adicionando aluno em um curso 
+
+# Adicionando alunos em um curso 
 curso1.matricular(aluno1)
 curso1.matricular(aluno2)
-# Adicionando turma em um curso 
+
+# Adicionando turmad em um curso 
 curso1.criarTurma(turma1)
 curso1.criarTurma(turma2)
-# adicionando alunos em uma turma 
+
+# Adicionando alunos em uma turma 
 turma1.inserir(aluno1)
 turma1.inserir(aluno2)
-# adicionando diciplinas em uma turma 
+
+# Adicionando diciplinas em uma turma 
 turma1.criarDisciplina(disciplina1)
 turma1.criarDisciplina(disciplina2)
-# Adicionando professor em uma turma
+
+# Adicionando professores em uma turma
 turma1.inserirProf(professor1)
 turma1.inserirProf(professor2)
 
@@ -191,6 +200,3 @@ turma1.inserirProf(professor2)
 # 12) excluir um aluno de um curso 
 # curso1.removerAluno(aluno1)
 # curso1.listarAlunos()
-
-
-
