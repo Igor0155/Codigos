@@ -1,6 +1,7 @@
 """
 algoritmo que calcula a média aritmética 
 de vários valores inteiros positivos
+
 """
 
 sum = 0

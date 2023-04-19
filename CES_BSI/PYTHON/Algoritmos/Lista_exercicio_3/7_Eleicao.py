@@ -5,6 +5,7 @@ escreve as seguintes informações:
 2 - total de votos nulos;
 3 -  total de votos em branco.
 Com finalizador do conjunto de votos, utilizando o valor 0
+
 """
 
 cand1 = cand2 = cand3 = cand4 = nulo = white = 0

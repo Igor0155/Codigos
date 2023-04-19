@@ -1,6 +1,7 @@
 """
 Esse programa pega 20 valores 
 e imprime p maior e o menor número deles
+
 """
 
 value = float(input(f'Insira o 1º valor: '))

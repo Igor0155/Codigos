@@ -2,6 +2,7 @@
 algoritmo que calcule e imprima
 quantos anos serão necessários 
 para que Zé seja maior que Chico
+
 """
 
 chico = 1.50

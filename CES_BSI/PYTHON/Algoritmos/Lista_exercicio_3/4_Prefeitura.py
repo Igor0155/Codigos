@@ -3,6 +3,7 @@ Esse programa coleta dados de uma cidade
 e faz a media do salario, filhos. E também 
 pega o maior salario e o percentual de salario 
 até R$100
+
 """
 
 aux = 0

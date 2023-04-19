@@ -1,6 +1,7 @@
 """
 Esse programa pega 10 numeros digitados
 pelo usuario e imprime os numeros negativos
+
 """
 
 Values = []
