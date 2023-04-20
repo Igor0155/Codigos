@@ -1,5 +1,5 @@
 """"
-Tabuada do numero digitado pelo usuario
+Tabuada do número digitado pelo usuario
 
 """
 num = int(input('Insira um numero: '))

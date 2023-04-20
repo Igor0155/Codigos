@@ -1,6 +1,6 @@
 """
 Esse programa pega 20 valores 
-e imprime p maior e o menor número deles
+e imprime o maior e o menor número deles
 
 """
 

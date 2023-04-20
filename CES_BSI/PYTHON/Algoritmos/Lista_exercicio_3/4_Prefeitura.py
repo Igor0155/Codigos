@@ -1,7 +1,7 @@
 """
 Esse programa coleta dados de uma cidade 
-e faz a media do salario, filhos. E também 
-pega o maior salario e o percentual de salario 
+e faz a média do salário, filhos. E também 
+pega o maior salário e o percentual de salário 
 até R$100
 
 """

@@ -1,5 +1,5 @@
 """
-Esse programa faz a fatoração de um numero
+Esse programa faz a fatoração de um número
 
 """
 

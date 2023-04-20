@@ -1,6 +1,6 @@
 """
-Esse programa pega 10 numeros digitados
-pelo usuario e imprime os numeros negativos
+Esse programa pega 10 números digitados
+pelo usuário e imprime os números negativos
 
 """
 
