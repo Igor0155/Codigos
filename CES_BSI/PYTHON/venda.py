@@ -2,10 +2,8 @@ import struct
 import os
 import re
 
-
 formtRegistroBin = 'if10s'
 nomeArq = 'vendas.bin'
-nomeArqTemp = 'vendas_temp.bin'
 
 # Função para criar o arquivo de dados
 def criacao_arq():
@@ -19,20 +17,22 @@ def criacao_arq():
 # Função para incluir um vendedor no arquivo
 def adicionar_vendedores():
     if os.path.exists(nomeArq):
-        codigoVendedor = int(input("Insira o Código do Vendedor: "))
+        codigoVendedor = int(input("Insira o Código do Vendedor <0 - Sair>: "))
+        if codigoVendedor == 0:
+            return
         valorVenda = float(input("Insira o Valor da Venda: "))
         mesAno = input("Insira o mês e ano no formato 'mm/aaaa': ")
-        
         # Validação do código do vendedor
         if codigoVendedor <= 0:
             print("\nErro: O código do vendedor deve ser um número inteiro positivo.")
             return
-        
         # Validação do formato do mês/ano
         if not re.match(r'^\d{2}/\d{4}$', mesAno):
             print("\nErro: O formato do mês/ano deve ser 'mm/aaaa'.")
             return
-        
+        mes, ano = mesAno.split("/")
+        mes = mes.zfill(2)
+        data = f"{mes}/{ano}"
         # Lê todos os registros do arquivo e armazena em uma lista de tuplas
         registros = []
         with open(nomeArq, 'rb') as arq:
@@ -41,13 +41,11 @@ def adicionar_vendedores():
                 if not registro:
                     break
                 registros.append(struct.unpack(formtRegistroBin, registro))
-        
-        # Verifica se já existe um registro com o mesmo código de vendedor e mês/ano na lista
-        for reg in registros:
-            if reg[0] == codigoVendedor and reg[2].decode('utf-8') == mesAno:
-                print("\nErro: Já existe um registro com o mesmo código de vendedor e mês/ano.")
-                return
-        
+            # Verifica se já existe um registro com o mesmo código de vendedor e mês/ano na lista
+            for reg in registros:
+                if reg[0] == codigoVendedor and reg[2].decode("utf-8").strip("\x00")  == data:
+                    print("\nErro: Já existe um registro com o mesmo código de vendedor e mês/ano.")
+                    return
         # Se não houver registros duplicados, adiciona o novo registro
         with open(nomeArq, 'ab') as arq:
             registro = struct.pack(formtRegistroBin, codigoVendedor, valorVenda, mesAno.encode('utf-8'))
@@ -57,107 +55,47 @@ def adicionar_vendedores():
         print("\nArquivo não encontrado.\nCrie um arquivo para poder adicionar um vendedor")
 
 # Função para excluir um vendedor do arquivo
-# def excluir_vendedor():
-#     codigoVendedor = int(input("Insira o código do vendedor para excluir: "))
-#     mesAno = input("Insira o mês e ano do registro para excluir: ")
-
-#     # Validação do formato do mês/ano
-#     if not re.match(r'^\d{2}/\d{4}$', mesAno):
-#         print("\nErro: O formato do mês/ano deve ser 'mm/aaaa'.")
-#         return    
-#     if os.path.exists(nomeArq):
-#         with open(nomeArq, 'r+b') as arqOrig:
-#             tamanhoRegistro = struct.calcsize(formtRegistroBin)
-#             while True:
-#                 posicao_atual = arqOrig.tell()
-#                 registro = arqOrig.read(tamanhoRegistro)
-#                 if not registro:
-#                     break
-#                 regDecodificado = struct.unpack(formtRegistroBin, registro)
-#                 if regDecodificado[0] == codigoVendedor or regDecodificado[2].decode('utf-8') == mesAno:
-#                     arqOrig.seek(posicao_atual)
-#                     arqOrig.write(b'\x00' * tamanhoRegistro)
-#                     print("\nRegistro excluído com sucesso.")
-#                     return
-#         print("\nRegistro não encontrado.")
-#     else:
-#         print("\nRegistro não encontrado.")
-
-# Mais perto de funcionar 
-# def excluir_vendedor():
-#     codigoVendedor = int(input("Insira o código do vendedor para excluir: "))
-#     mesAno = input("Insira o mês e ano do registro para excluir: ")
-#     mes, ano = mesAno.split("/")
-#     mes = mes.zfill(2)
-#     data = f"{mes}/{ano}"
-
-#     if os.path.exists(nomeArq):
-#         with open(nomeArq, "r+b") as arq:
-#             tamanhoRegistro = struct.calcsize(formtRegistroBin)
-#             while True:
-#                 posicao_atual = arq.tell()
-#                 registro = arq.read(tamanhoRegistro)
-#                 if not registro:
-#                     break
-#                 registro_decodificado = struct.unpack(formtRegistroBin, registro)
-#                 data_registro = registro_decodificado[2].decode("utf-8").strip("\x00")
-#                 if registro_decodificado[0] == codigoVendedor and data_registro == data:
-#                     arq.seek(posicao_atual)
-#                     arq.write(b'\x00' * tamanhoRegistro)
-#                     arq.truncate()
-#                     print("Registro excluído com sucesso!")
-#                     return
-#     else:
-#         print("Arquivo não encontrado!")
-#     print(f"Registro não encontrado para o vendedor {codigoVendedor} e a data {mesAno}.")
-
-
 def excluir_vendedor():
-    codigoVendedor = int(input("Insira o código do vendedor para excluir: "))
+    codigoVendedor = int(input("Insira o código do vendedor para excluir  <0 - Sair>: "))
+    if codigoVendedor == 0:
+        return
     mesAno = input("Insira o mês e ano do registro para excluir: ")
-    mes, ano = mesAno.split("/")
-    mes = mes.zfill(2)
-    data = f"{mes}/{ano}"
-
-    if os.path.exists(nomeArq):
-        with open(nomeArq, "r+b") as arq:
-            tamanhoRegistro = struct.calcsize(formtRegistroBin)
-            with open(nomeArqTemp, "wb") as arqTemp:
-                while True:
-                    posicao_atual = arq.tell()
-                    registro = arq.read(tamanhoRegistro)
-                    if not registro:
-                        break
-                    registro_decodificado = struct.unpack(formtRegistroBin, registro)
-                    data_registro = registro_decodificado[2].decode("utf-8").strip("\x00")
-                    if (registro_decodificado[0] != codigoVendedor) and (data_registro != data):
-                        arqTemp.write(registro)
-                arq.truncate(0)
-                arq.seek(0)
-                arq.write(arqTemp.read())
-                arqTemp.close()
-                print("Registro excluído com sucesso!")
-    else:
-        print("Arquivo não encontrado!")
-
-
-
-
-# Função para alterar o valor total da venda
-def alterar_valor_venda():
-    codigoVendedor = int(input("Insira o código do vendedor: "))
-    novoValorVenda = float(input("Insira o novo valor da venda: "))
-    mesAno = input("Insira o mês e ano (Mês/Ano) do registro para alterar: ")
-    
     # Validação do formato do mês/ano
     if not re.match(r'^\d{2}/\d{4}$', mesAno):
         print("\nErro: O formato do mês/ano deve ser 'mm/aaaa'.")
+        return    
+    if os.path.exists(nomeArq):
+        with open(nomeArq, 'r+b') as arqOrig:
+            tamanhoRegistro = struct.calcsize(formtRegistroBin)
+            while True:
+                posicao_atual = arqOrig.tell()
+                registro = arqOrig.read(tamanhoRegistro)
+                if not registro:
+                    break
+                regDecodificado = struct.unpack(formtRegistroBin, registro)
+                if regDecodificado[0] == codigoVendedor or regDecodificado[2].decode('utf-8') == mesAno:
+                    arqOrig.seek(posicao_atual)
+                    arqOrig.write(b'\x00' * tamanhoRegistro)
+                    print("\nRegistro excluído com sucesso.")
+                    return
+        print("\nRegistro não encontrado.")
+    else:
+        print("\nRegistro não encontrado.")
+
+# Função para alterar o valor total da venda
+def alterar_valor_venda():
+    codigoVendedor = int(input("Insira o código do vendedor <0 - Sair>: "))
+    if codigoVendedor == 0:
         return
-    
+    novoValorVenda = float(input("Insira o novo valor da venda: "))
+    mesAno = input("Insira o mês e ano (Mês/Ano) do registro para alterar: ")   
+    # Validação do formato do mês/ano
+    if not re.match(r'^\d{2}/\d{4}$', mesAno):
+        print("\nErro: O formato do mês/ano deve ser 'mm/aaaa'.")
+        return    
     mes, ano = mesAno.split("/")
     mes = mes.zfill(2)
-    data = f"{mes}/{ano}"
-    
+    data = f"{mes}/{ano}"    
     if os.path.exists(nomeArq):
         with open(nomeArq, "r+b") as arq:
             tamanhoRegistro = struct.calcsize(formtRegistroBin)
@@ -165,10 +103,10 @@ def alterar_valor_venda():
                 registro = arq.read(tamanhoRegistro)
                 if not registro:
                     break
-                registro_decodificado = struct.unpack(formtRegistroBin, registro)
+                registroDecod = struct.unpack(formtRegistroBin, registro)
                 # retirar os bytes nulos finais da string
-                data_registro = registro_decodificado[2].decode("utf-8").strip("\x00")  
-                if registro_decodificado[0] == codigoVendedor and data_registro == data:
+                dataReg = registroDecod[2].decode("utf-8").strip("\x00")  
+                if registroDecod[0] == codigoVendedor and dataReg == data:
                     arq.seek(-tamanhoRegistro, os.SEEK_CUR)
                     registro_alterado = struct.pack(formtRegistroBin, codigoVendedor, novoValorVenda, data.encode("utf-8"))
                     arq.write(registro_alterado)
@@ -177,8 +115,6 @@ def alterar_valor_venda():
     else:
         print("\nArquivo não encontrado!")
     print(f"\nRegistro não encontrado para o vendedor {codigoVendedor} e a data {mesAno}.")
-
-
 
 # Função para imprimir os registros 
 def imprimir_registros():
@@ -189,8 +125,9 @@ def imprimir_registros():
                 registro = arq.read(struct.calcsize(formtRegistroBin))
                 if not registro:
                     break
-                codigo_vendedor, valor_venda, mes_ano = struct.unpack(formtRegistroBin, registro)
-                print(f"Código do Vendedor: {codigo_vendedor}, Valor da Venda: {valor_venda}, Mês/Ano: {mes_ano.decode('utf-8')}")
+                codigoVendedor, valorVenda, mesAno = struct.unpack(formtRegistroBin, registro)
+                if codigoVendedor != 0:
+                    print(f"Código do Vendedor: {codigoVendedor}, Valor da Venda: {valorVenda}, Mês/Ano: {mesAno.decode('utf-8')}")
     else:
         print("Nenhum registro encontrado.")
 
@@ -244,4 +181,3 @@ Menu:
         opcoes[selecionado]()
     else:
         print('\nOpção inválida, tente novamente!!!')
-    
